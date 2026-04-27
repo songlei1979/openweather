@@ -15,6 +15,7 @@
                     console.log("Success:", response);
                     $("#clouds").text(response.clouds.all);
                     $("#temp").text(response.main.temp);
+                    $("#humidity").text(response.main.humidity);
                 },
                 error: function (xhr, status, err) { // Handler for failures
                     console.error("Error:", err);
@@ -27,5 +28,6 @@
 <h2>Auckland</h2>
 <p>Clouds: <span id="clouds"></span></p>
 <p>Temp: <span id="temp"></span></p>
+<p>Humidity: <span id="humidity"></span></p>
 </body>
 </html>

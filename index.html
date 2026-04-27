@@ -8,7 +8,7 @@
     <script>
         $(document).ready(function () {
             $.ajax({
-                url: "http://api.openweathermap.org/geo/1.0/direct?q=Auckland&appid=39d7446e1964451a5fc620f178f0baf7", // The target URL
+                url: "https://api.openweathermap.org/data/2.5/weather?q=Auckland&appid=39d7446e1964451a5fc620f178f0baf7", // The target URL
                 type: "GET",                        // HTTP method (GET, POST, etc.)
                 dataType: "json",                   // Type of data expected back
                 success: function (response) {       // Handler for success

@@ -13,6 +13,8 @@
                 dataType: "json",                   // Type of data expected back
                 success: function (response) {       // Handler for success
                     console.log("Success:", response);
+                    $("#clouds").text(response.clouds.all);
+                    $("#temp").text(response.main.temp);
                 },
                 error: function (xhr, status, err) { // Handler for failures
                     console.error("Error:", err);
@@ -22,6 +24,8 @@
     </script>
 </head>
 <body>
-
+<h2>Auckland</h2>
+<p>Clouds: <span id="clouds"></span></p>
+<p>Temp: <span id="temp"></span></p>
 </body>
 </html>

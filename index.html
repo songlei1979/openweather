@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+            integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "http://api.openweathermap.org/geo/1.0/direct?q=Auckland&appid=39d7446e1964451a5fc620f178f0baf7", // The target URL
+                type: "GET",                        // HTTP method (GET, POST, etc.)
+                dataType: "json",                   // Type of data expected back
+                success: function (response) {       // Handler for success
+                    console.log("Success:", response);
+                },
+                error: function (xhr, status, err) { // Handler for failures
+                    console.error("Error:", err);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>
